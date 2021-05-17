@@ -1,0 +1,21 @@
+.PostListContainer {
+    border: 1px solid black;
+    width: 480px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Dosis', sans-serif;
+}
+
+h2 {
+    font-weight: 1000;
+    font-size: 20px;
+    margin: 0;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 7px;
+}
