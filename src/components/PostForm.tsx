@@ -4,7 +4,7 @@ import { useState, FormEvent } from 'react';
 
 interface Props {
     onSubmit: (post: Post) => void;
-    onClose?: () => void
+    onClose: () => void
 }
 
 function PostForm({ onSubmit, onClose }: Props) {
@@ -34,7 +34,7 @@ function PostForm({ onSubmit, onClose }: Props) {
     return (
         <div className="PostForm">
             <form onSubmit={handleSubmit}>
-                {/* <i className="fas fa-times-circle" onClick={closeForm}></i> */}
+                <i className="fas fa-times-circle" onClick={onClose}></i>
                 <p>
                     <label>Title<br></br>
                         <input className="title" type="text" value={title} onChange={e => setTitle(e.target.value)} />

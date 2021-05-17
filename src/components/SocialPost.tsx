@@ -21,6 +21,11 @@ function SocialPost() {
 
     function handleAddPost(post: Post): void {
         setPost(prevPost => [ ...prevPost, post ]);
+        setDisplay(false);
+    }
+
+    function hideForm() {
+        setDisplay(false)
     }
 
     return (
@@ -34,7 +39,7 @@ function SocialPost() {
                     <PostInList key={i} post={post} />
                 )}
             </section>
-            {display && <PostForm onSubmit={handleAddPost} /> }
+            {display && <PostForm onSubmit={handleAddPost} onClose={hideForm} /> }
         </div>
     )
 
